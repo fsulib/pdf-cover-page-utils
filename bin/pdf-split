@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ];
+then
+  echo "Include the file you want to split, then the names of the output files, like this:"
+  echo "./pdf-split.sh path/to/filetosplit.pdf path/to/firstpage.pdf path/to/restofpages.pdf"
+  exit
+fi
+
+printf "Splitting $1... "
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=1 -dLastPage=1 -sOutputFile=$2 &> /dev/null
+gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=2 -sOutputFile=$3 $1 &> /dev/null
+echo "Done!"

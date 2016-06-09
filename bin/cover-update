@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ -z "$2" ];
+then
+  echo "This script will split off the first page of the specified PDF, generate"
+  echo "a new one from the specified MODS record, and then merge it back on to "
+  echo "the specified PDF."
+  echo ""
+  echo "Include the PDF to be regenerated and MODS record to pull from, like this:"
+  echo "cover-update path/to/file.pdf path/to/mods.xml"
+  exit
+fi
+
+BASENAME=`echo $1 | sed "s/.pdf//"`
+BASEPATH=`dirname $0`
+
+$BASEPATH/pdf-split $1 $BASENAME.cover.pdf $BASENAME.uncovered.pdf
+$BASEPATH/cover-generate $2 $BASENAME.newcover.pdf 
+$BASEPATH/pdf-merge $BASENAME.newcover.pdf $BASENAME.uncovered.pdf $BASENAME.recovered.pdf
+
+rm $BASENAME.cover.pdf $BASENAME.newcover.pdf $BASENAME.uncovered.pdf
+
+echo "The coverpage of $1 has been updated in $BASENAME.recovered.pdf!"

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] ;
+then
+  echo "Include the files you want to merge, like this:"
+  echo "./pdf-merge.sh path/to/firstfiletomerge.pdf path/to/secondfiletomerge.pdf path/to/outputfile.pdf"
+  exit
+fi
+
+printf "Merging $1 and $2... "
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$3 $1 $2
+echo "Done!"

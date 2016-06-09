@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ -z "$2" ];
+then
+  echo "Include the MODS record you want to generate a cover page from and the output file,like this:"
+  echo "cover-generate path/to/mods.xml path/to/outputfile.pdf"
+  exit
+fi
+
+BASEPATH=`dirname $0`
+
+printf "Generating a new cover page from $1... "
+$BASEPATH/../assets/coverpage-generator.php $1 $2
+echo "Done!"
