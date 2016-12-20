@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd" version="3.4">
+  <titleInfo lang="eng">
+    <title>La Baja Edad Media Española: La Inexistencia de Discriminación Racial Antes de la Modernidad.</title>
+    <subTitle>Final Report β</subTitle>
+  </titleInfo>
+  <name type="personal" authority="local">
+    <namePart type="given">Micah</namePart>
+    <namePart type="family">Vandegrift</namePart>
+    <role>
+      <roleTerm authority="rda" type="text">author</roleTerm>
+      <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+    </role>
+  </name>
+  <name type="personal" authority="local">
+    <namePart type="given">Bryan</namePart>
+    <namePart type="family">Brown</namePart>
+    <role>
+      <roleTerm authority="rda" type="text">author</roleTerm>
+      <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+    </role>
+  </name>
+  <name type="personal" authority="local">
+    <namePart type="given">Devin</namePart>
+    <namePart type="family">Soper</namePart>
+    <role>
+      <roleTerm authority="rda" type="text">author</roleTerm>
+      <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+    </role>
+  </name>
+  <typeOfResource>text</typeOfResource>
+  <genre authority="rdacontent">text</genre>
+  <originInfo>
+    <dateIssued encoding="w3cdtf" keyDate="yes">2011</dateIssued>
+    <issuance>serial</issuance>
+  </originInfo>
+  <language>
+    <languageTerm type="text">English</languageTerm>
+    <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+  </language>
+  <physicalDescription>
+    <form authority="rdamedia" type="RDA media terms">computer</form>
+    <form authority="rdacarrier" type="RDA carrier terms">online
+                                    resource</form>
+    <extent>1 online resource</extent>
+    <digitalOrigin>born digital</digitalOrigin>
+    <internetMediaType>application/pdf</internetMediaType>
+  </physicalDescription>
+  <abstract>This report summarizes the work of the Scholarly Communications Task Force. The Task Force was charged to:Conduct an environmental scan of FSUs faculty involvement in scholarly publishing; Increase awareness of scholarly communication issues on campus; Explore support for copyright assistance and open-access initiatives with FSU administration; and make recommendations to the Faculty Senate about scholarly communication initiatives and/or policies. The final product of the Task Force was an Open Access Resolution, passed unanimously in the Faculty Senate on Oct. 19, 2011, supporting the continued work of the libraries in exploring and addressing open access on campus.</abstract>
+  <note displayLabel="Publication Note">Look! The publication note changed too!</note>
+  <note displayLabel="Keywords">open access, scholarly communications, institutional repository</note>
+  <note type="citation/reference" displayLabel="Citation">Micah Vandegrift (2011): Faculty Senate Library Committee - Task Force on Scholarly Communications: Final Report. Florida State University Libraries. http://dx.doi.org/10.5072/FK23F4NR69</note>
+  <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects/sh85066150">
+    <topic>Information science</topic>
+  </subject>
+  <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects/sh85076723">
+    <topic>Library science</topic>
+  </subject>
+  <location displayLabel="Fulltext">
+    <url>http://dx.doi.org/10.5072/FK23F4NR69</url>
+  </location>
+  <recordInfo>
+    <recordCreationDate encoding="w3cdtf">2015-06-20T10:03:14.455-04:00</recordCreationDate>
+    <descriptionStandard>rda</descriptionStandard>
+  </recordInfo>
+  <relatedItem type="series">
+    <titleInfo lang="eng">
+      <title>Library Faculty Publications</title>
+    </titleInfo>
+  </relatedItem>
+  <extension>
+    <flvc:flvc>
+      <flvc:owningInstitution>FSU</flvc:owningInstitution>
+      <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+    </flvc:flvc>
+  </extension>
+  <identifier type="IID">FSU_migr_library_faculty_publications-0002</identifier>
+  <location displayLabel="purl">
+    <url>http://purl.flvc.org/fsu/fd/FSU_migr_library_faculty_publications-0002</url>
+  </location>
+</mods:mods>
