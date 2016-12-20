@@ -6,32 +6,14 @@ require_once(__DIR__ . '/tfpdf/tfpdf.php');
 // map FPDF to tFPDF so FPDF_TPL can extend it
 class FPDF extends tFPDF
 {
-    /**
-     * "Remembers" the template id of the imported page
-     */
     protected $_tplIdx;
 
-    /**
-     * Draw an imported PDF logo on every page
-     */
     public function Header()
     {
         if (is_null($this->_tplIdx)) {
             $this->setSourceFile(__DIR__ . '/coverpage.pdf');
             $this->_tplIdx = $this->importPage(1);
         }
-        /* The rest of this function was originally included but is not useful for our purposes
-        
-        $size = $this->useTemplate($this->_tplIdx, 130, 5, 60);
-
-        $this->SetFont('Times', '', 16);
-        $this->SetTextColor(0);
-        $this->SetXY($this->lMargin, 5);
-
-        $text = 'tFPDF (v' . tFPDF_VERSION . ') and FPDI (v'
-            . FPDI::VERSION . ')';
-        $this->Cell(0, $size['h'], $text);
-        $this->Ln(); */
     }
 }
 
@@ -63,7 +45,11 @@ $preppedTitle = "{$preppedNonSort}{$mods->titleInfo->title}{$preppedSubTitle}";
 unset($author_array);
 $author_array = array();
 foreach ($mods->name as $author) {
-  $preppedAuthor = "{$author->namePart[0]} {$author->namePart[1]}";
+  foreach ($author->namePart as $namePart) {
+    if ($namePart['type'] == 'given') { $firstname = $namePart; }
+    if ($namePart['type'] == 'family') { $lastname = $namePart; }
+  }
+  $preppedAuthor = "$firstname $lastname";
   $author_array[] = $preppedAuthor;
 }
 if (count($author_array) == 1) {                                          
